@@ -8,65 +8,44 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Button
 } from 'react-native';
 
 import { MonoText } from '../components/StyledText';
 
-export default function HomeScreen() {
-  return (
-    <View style={styles.container}>
-      <ScrollView
-        style={styles.container}
-        contentContainerStyle={styles.contentContainer}>
-        <View style={styles.welcomeContainer}>
-          <Image
-            source={
-              __DEV__
-                ? require('../assets/images/robot-dev.png')
-                : require('../assets/images/robot-prod.png')
-            }
-            style={styles.welcomeImage}
-          />
+
+export default class HomeScreen extends React.Component {
+
+    constructor(props){
+        super();
+            this.state= {
+            counter:0
+             }
+     }
+
+    add = () => {
+        this.setState({
+            counter:this.state.counter+1
+        })
+    }
+
+    del = () => {
+        this.setState({
+            counter:this.state.counter-1
+        })
+    }
+
+    render() {
+
+      return (
+        <View style={{marginTop: 100}}>
+            <Text> counter: {this.state.counter}</Text>
+            <Button  onPress={() => this.add() } title="Add"/>
+
+            <Button  onPress={() => this.del() } title="Delete"/>
         </View>
-
-        <View style={styles.getStartedContainer}>
-          <DevelopmentModeNotice />
-
-          <Text style={styles.getStartedText}>Get started by opening</Text>
-
-          <View
-            style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-            <MonoText>screens/HomeScreen.js</MonoText>
-          </View>
-
-          <Text style={styles.getStartedText}>
-            My first React App
-          </Text>
-        </View>
-
-        <View style={styles.helpContainer}>
-          <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
-            <Text style={styles.helpLinkText}>
-              Help, it didn’t automatically reload!
-            </Text>
-          </TouchableOpacity>
-        </View>
-      </ScrollView>
-
-      <View style={styles.tabBarInfoContainer}>
-        <Text style={styles.tabBarInfoText}>
-          This is a tab bar. You can edit it in:
-        </Text>
-
-        <View
-          style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-          <MonoText style={styles.codeHighlightText}>
-            navigation/MainTabNavigator.js
-          </MonoText>
-        </View>
-      </View>
-    </View>
-  );
+      );
+  }
 }
 
 HomeScreen.navigationOptions = {
@@ -146,7 +125,7 @@ const styles = StyleSheet.create({
     color: 'rgba(96,100,109, 0.8)',
   },
   codeHighlightContainer: {
-    backgroundColor: 'rgba(200,0,0,0.05)',
+    backgroundColor: 'rgba(100,0,0,0.05)',
     borderRadius: 3,
     paddingHorizontal: 4,
   },

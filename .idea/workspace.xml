@@ -2,39 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fa38ba4-a14c-4f32-b535-bcc5bde6ef68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.expo-shared/assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/my-new-project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.watchmanconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__tests__/App-test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__tests__/__snapshots__/App-test.js.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/SpaceMono-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/robot-dev.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/robot-prod.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/splash.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/StyledText.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/TabBarIcon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/__tests__/StyledText-test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/__tests__/__snapshots__/StyledText-test.js.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/constants/Colors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/constants/Layout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navigation/AppNavigator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navigation/AppNavigator.web.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navigation/MainTabNavigator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/HomeScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/LinksScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/SettingsScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/HomeScreen.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
