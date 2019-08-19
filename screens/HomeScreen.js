@@ -1,5 +1,6 @@
 import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
+import contacts, {compareNames} from './contacts.js'
 import {
   Image,
   Platform,
@@ -15,41 +16,32 @@ import { MonoText } from '../components/StyledText';
 
 
 export default class HomeScreen extends React.Component {
-
-    constructor(props){
-        super();
-            this.state= {
-            counter:0
-             }
-     }
-
-    add = () => {
-        this.setState({
-            counter:this.state.counter+1
-        })
-    }
-
-    del = () => {
-        this.setState({
-            counter:this.state.counter-1
-        })
-    }
-
-    render() {
-
-      return (
-        <View style={{marginTop: 100}}>
-            <Text> counter: {this.state.counter}</Text>
-            <Button  onPress={() => this.add() } title="Add"/>
-
-            <Button  onPress={() => this.del() } title="Delete"/>
-        </View>
-      );
+    state = {
+        showContacts : false,
+        contacts: contacts,
   }
-}
+  toggleContacts = () => {
+    this.setState(prevState => ({showContacts: !prevState.showContacts}))
+  }
 
+
+
+
+ render() {
+    return (
+      <View style={styles.container}>
+      <Button title="toggle contacts" onPress={this.toggleContacts} />
+      <ScrollView>
+      {contacts.map(contact =>(
+        <Text key={contacts.key}>{contact.name}</Text>
+      ))}
+      </ScrollView>
+      </View>
+    );
+  }
+  }
 HomeScreen.navigationOptions = {
-  header: null,
+  header:null ,
 };
 
 function DevelopmentModeNotice() {
@@ -174,4 +166,5 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#2e78b7',
   },
+
 });
