@@ -22,27 +22,33 @@ export default class HomeScreen extends React.Component {
         contacts: contacts,
   }
   toggleContacts = () => {
-    this.setState(prevState => ({showContacts: !prevState.showContacts}))
+//    this.setState(prevState => ({showContacts: !prevState.showContacts}))
+
+    this.setState( function ( prevState ) {
+        return {showContacts: !prevState.showContacts}
+    } );
+
+//    if(this.state.showContacts === true) {
+//        this.setState({showContacts: false})
+//    } else {
+//        this.setState({showContacts: true})
+//    }
   }
 
  render() {
-    if (this.state.showContacts){
-        return (
-            <View style={styles.container}>
-      <Button title="toggle contacts" onPress={this.toggleContacts} />
-      <ScrollView>
-      {contacts.map(contact => <Row key={contact.key}{...contact}/>)}
-      </ScrollView>
-      </View>
-        )
-    }
     return (
-        <View style={styles.container}>
-      <Button title="toggle contacts" onPress={this.toggleContacts} />
-      </View>
-        );
-    }
-  }
+      <View style={styles.container}>
+        <Button title="toggle contacts" onPress={this.toggleContacts} />
+            {this.state.showContacts?(
+            <ScrollView>
+                {contacts.map(contact => <Row key {...contact}/>)}
+            </ScrollView>
+            ) : null
+            }
+       </View>
+           );
+      }
+ }
 HomeScreen.navigationOptions = {
   header:null ,
 };
