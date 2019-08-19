@@ -26,15 +26,22 @@ export default class HomeScreen extends React.Component {
   }
 
  render() {
-    return (
-      <View style={styles.container}>
+    if (this.state.showContacts){
+        return (
+            <View style={styles.container}>
       <Button title="toggle contacts" onPress={this.toggleContacts} />
       <ScrollView>
       {contacts.map(contact => <Row key={contact.key}{...contact}/>)}
       </ScrollView>
       </View>
-    );
-  }
+        )
+    }
+    return (
+        <View style={styles.container}>
+      <Button title="toggle contacts" onPress={this.toggleContacts} />
+      </View>
+        );
+    }
   }
 HomeScreen.navigationOptions = {
   header:null ,
