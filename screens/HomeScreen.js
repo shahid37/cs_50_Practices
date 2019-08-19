@@ -1,6 +1,7 @@
 import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
 import contacts, {compareNames} from './contacts.js'
+import Row from './Row'
 import {
   Image,
   Platform,
@@ -24,17 +25,12 @@ export default class HomeScreen extends React.Component {
     this.setState(prevState => ({showContacts: !prevState.showContacts}))
   }
 
-
-
-
  render() {
     return (
       <View style={styles.container}>
       <Button title="toggle contacts" onPress={this.toggleContacts} />
       <ScrollView>
-      {contacts.map(contact =>(
-        <Text key={contacts.key}>{contact.name}</Text>
-      ))}
+      {contacts.map(contact => <Row key={contact.key}{...contact}/>)}
       </ScrollView>
       </View>
     );
