@@ -10,6 +10,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  FlatList,
   Button
 } from 'react-native';
 
@@ -21,12 +22,18 @@ export default class HomeScreen extends React.Component {
         showContacts : false,
         contacts: contacts,
   }
-  toggleContacts = () => {
+    toggleContacts = () => {
 //    this.setState(prevState => ({showContacts: !prevState.showContacts}))
 
     this.setState( function ( prevState ) {
         return {showContacts: !prevState.showContacts}
     } );
+    }
+
+    sort = () => {
+        this.setState(prevState => ({contacts: prevState.contacts.sort(compareNames)
+        }))
+    }
 
 //    if(this.state.showContacts === true) {
 //        this.setState({showContacts: false})
@@ -34,21 +41,24 @@ export default class HomeScreen extends React.Component {
 //        this.setState({showContacts: true})
 //    }
   }
+  renderItem = obj => <Row {...(obj.item)}/>
 
- render() {
+  render() {
     return (
       <View style={styles.container}>
         <Button title="toggle contacts" onPress={this.toggleContacts} />
+        <Button title="sorting contacts" onPress={this.sort} />
             {this.state.showContacts?(
-            <ScrollView>
-                {contacts.map(contact => <Row key {...contact}/>)}
-            </ScrollView>
+            <FlatList
+            renderItem =v{this.renderItem}
+                data = {this.state.contacts}
+            />
             ) : null
             }
        </View>
            );
       }
- }
+}
 HomeScreen.navigationOptions = {
   header:null ,
 };
