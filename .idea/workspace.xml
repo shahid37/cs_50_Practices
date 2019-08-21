@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fa38ba4-a14c-4f32-b535-bcc5bde6ef68" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.package.json.swp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redux/reducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redux/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redux/store2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/.expo/packager-info.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/.expo/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/reducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/store2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/xaa" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/HomeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/contacts.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,10 +27,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1PSsMjk0pdmlePjN5L7dpz4Gle3" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -58,5 +73,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

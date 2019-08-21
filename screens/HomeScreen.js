@@ -16,49 +16,57 @@ import {
 
 import { MonoText } from '../components/StyledText';
 
-
+/*
+ const Row = props =>(
+    <View key={props.key}>
+       <Text>{props.name}</Text>
+       <Text>{props.phone}</Text>
+    </View>
+  )
+*/
 export default class HomeScreen extends React.Component {
     state = {
         showContacts : false,
         contacts: contacts,
   }
     toggleContacts = () => {
-//    this.setState(prevState => ({showContacts: !prevState.showContacts}))
-
-    this.setState( function ( prevState ) {
-        return {showContacts: !prevState.showContacts}
-    } );
+      this.setState(prevState => ({showContacts: !prevState.showContacts}))
     }
+  //  this.setState( function ( prevState ) {
+  //      return {showContacts: !prevState.showContacts}
+  //  } )
 
-    sort = () => {
-        this.setState(prevState => ({contacts: prevState.contacts.sort(compareNames)
-        }))
-    }
+   // sort = () => {
+   //     this.setState(prevState => ({contacts: prevState.contacts.sort(compareNames)
+   //     }))
+   // }
 
 //    if(this.state.showContacts === true) {
 //        this.setState({showContacts: false})
 //    } else {
 //        this.setState({showContacts: true})
 //    }
-  }
-  renderItem = obj => <Row {...(obj.item)}/>
 
-  render() {
-    return (
-      <View style={styles.container}>
-        <Button title="toggle contacts" onPress={this.toggleContacts} />
-        <Button title="sorting contacts" onPress={this.sort} />
-            {this.state.showContacts?(
-            <FlatList
-            renderItem =v{this.renderItem}
-                data = {this.state.contacts}
-            />
-            ) : null
-            }
-       </View>
-           );
-      }
-}
+    render() {
+        return (
+        <View style={styles.container}>
+            <Button title="toggle contacts" onPress={this.toggleContacts} />
+            <ScrollView>
+                {contacts.map(contact => <Row {...contact} />)} //Row key={contact.key} name={contact.key} phone={contact.phone}
+            </ScrollView>
+              // <Button title="sorting contacts" onPress={this.sort} />
+              //   {this.state.showContacts?(
+              // <FlatList
+              // renderItem =v{this.renderItem}
+              //   data = {this.state.contacts}
+              // />
+               // ) : null
+               // }
+         <View>
+      );
+     }
+  }
+/*
 HomeScreen.navigationOptions = {
   header:null ,
 };
@@ -97,7 +105,7 @@ function handleHelpPress() {
     'https://docs.expo.io/versions/latest/workflow/up-and-running/#cant-see-your-changes'
   );
 }
-
+*/
 const styles = StyleSheet.create({
   container: {
     flex: 1,
